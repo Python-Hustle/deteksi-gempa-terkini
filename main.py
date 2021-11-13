@@ -1,15 +1,7 @@
 """
 APLIKASI GEMPA TERKINI WILAYAH INDONESIA
 """
-
-
-def ekstrasi_data():
-    pass
-
-
-def tampilkan_data():
-    pass
-
+from gempaterkini import ekstrasi_data
 
 if __name__ == '__main__':
     print('Aplikasi utama')
