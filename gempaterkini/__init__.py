@@ -13,7 +13,7 @@ def ekstrasi_data():
         return None
 
     if content.status_code == 200:
-        print(content.status_code)
+        print(f"Sistem berhasil dijalankan status ({content.status_code})")
         soup = BeautifulSoup(content.text, 'html.parser')
 
         # CARA PERTAMA ------
@@ -41,7 +41,7 @@ def ekstrasi_data():
         dirasakan = None
 
         for res in result:
-            print(i, res)
+            # print(i, res)
             if i == 1:
                 magnitudo = res.text
 
@@ -83,7 +83,7 @@ def tampilkan_data(result):
         print("tidak bisa menemukan data gempa terkini")
         return
 
-    print("Gempa terkini berdasarkan BMKG")
+    print("\n--- Gempa terkini berdasarkan BMKG ---")
     print(f"Waktu : {result['waktu']}")
     print(f"Tanggal : {result['tanggal']}")
     print(f"Magnitudo : {result['magnitudo']}")
@@ -91,4 +91,5 @@ def tampilkan_data(result):
     print(f"Lokasi : {result['lokasi']}")
     print(f"Koordinat : {result['koordinat']['ls']} - {result['koordinat']['bt']}")
     print(f"Dirasakan : {result['dirasakan']}")
+    print("---------------------------------------")
 
