@@ -90,4 +90,4 @@ def tampilkan_data(result):
     print(f"Kedalaman : {result['kedalaman']}")
     print(f"Lokasi : {result['lokasi']}")
     print(f"Koordinat : {result['koordinat']['ls']} - {result['koordinat']['bt']}")
-    print(f"Dirasakan\\ : {result['dirasakan']}")
+    print(f"Dirasakan : {result['dirasakan']}")
